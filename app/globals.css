@@ -13,6 +13,7 @@
   display: none;                /* Chrome/Safari */
 }
 @theme{
+  --color-jbb2-brown:#755a40
   --color-jbb-brown:#856a53;
   --color-bb-red:#aa0029;
   --color-salon-brown: #7a5c45;

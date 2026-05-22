@@ -8,7 +8,7 @@ export default function BB(){
   viewBox="0 0 24 24"
   strokeWidth={1.5}
   stroke="currentColor"
-  className="size-10 bg-black text-white rounded-full p-2 cursor-pointer"
+  className="size-12 bg-black text-white rounded-full p-2 cursor-pointer"
   // onClick={()=>{
 
   // }}
