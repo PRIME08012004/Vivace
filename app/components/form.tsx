@@ -31,7 +31,7 @@ export default function ContactUsForm(){
       placeholder="Email"
       className="bg-transparent outline-none border-b-2 border-white pb-2 text-white placeholder:text-gray-400 focus:border-cal-brown transition-colors"
     />
-    <button className="text-black bg-white p-2  self-start rounded-full">Send Query</button>
+    <button className="text-black bg-white px-6 py-2  self-start rounded-full">Send Query</button>
         </div>
             
     </div>
