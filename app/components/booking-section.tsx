@@ -2,7 +2,7 @@ import { Quicksand } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { CalComponent } from "./cal-component";
 import Image from "next/image";
-import BookingForm from "./form";
+import ContactUsForm from "./form";
 
 const quicksand = Quicksand({
   weight: "400",
@@ -10,14 +10,14 @@ const quicksand = Quicksand({
 
 export default function Booking() {
   return (
-    <div className={cn(quicksand.className, "flex justify-between ")}>
-      <div className="flex relative overflow-hidden flex-col">
-        <h1 className="text-6xl font-medium ml-34">Booking</h1>
-        <p className="ml-34 w-90 pt-8">
+    <div className={cn(quicksand.className, "flex justify-evenly ")}>
+      <div className="flex relative overflow-hidden flex-col ">
+        <h1 className="text-6xl font-medium ">Booking</h1>
+        <p className=" w-90 pt-8">
           Ready for a transformative experience? Book your appointment now at
           vivace and let us craft a style that defines you.
         </p>
-        <div className="ml-34 ">
+        <div className=" ">
           <Image
             src={"/hm4.png"}
             alt="Hair Model"
@@ -31,8 +31,8 @@ export default function Booking() {
       <div>
         <CalComponent />
       </div>
-      <div className="w-64">
-        <BookingForm/>
+      <div className="w-130  ">
+        <ContactUsForm/>
       </div>
     </div>
   );

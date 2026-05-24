@@ -17,7 +17,7 @@ export function CalComponent() {
     <div
       className={cn(
         quicksand.className,
-        "flex flex-col p-2 bg-white rounded-4xl ",
+        "flex flex-col p-2 bg-white rounded-4xl shadow-xl",
       )}
     >
       <Calendar
