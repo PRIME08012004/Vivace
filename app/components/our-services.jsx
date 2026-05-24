@@ -12,13 +12,13 @@ export default function OurServices() {
         <div
           className={cn(
             quicksand.className,
-            "w-16 flex-1 h-100 flex justify-center items-center p-20",
+            "w-16 flex-1 h-100 flex justify-center items-center p-8",
           )}
         >
           <div className="flex flex-col ">
             <h1 className="text-6xl p-4 font-medium">Our Services</h1>
             <p className="p-4">
-              Beyond haircuts, discover a comprehensive range of services, from
+              Beyond haircuts, discover a comprehensive<br></br> range of services, from
               coloring to extensions
             </p>
           </div>

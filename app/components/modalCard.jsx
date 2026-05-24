@@ -9,30 +9,34 @@ const quicksand = Quicksand({
 export default function Modal() {
   return (
     <div className="flex justify-center gap-10 items-start p-4">
-      <div className="w-80 h-80 rounded-4xl  relative overflow-hidden">
+      <div className="w-100 h-80 rounded-4xl  relative overflow-hidden shadow-md">
         <div
           className={cn(
-            "z-50 p-2 m-3 relative w-20 bg-white rounded-full flex justify-center items-center",
+            "z-50 p-2 m-3 relative w-20 bg-white rounded-full flex justify-center items-center ",
             quicksand.className,
           )}
         >
-          Haircut
+         <h1 className="font-bold">
+           Haircut
+         </h1>
         </div>
         <Image
           src={"/corousalmodel2.jpg"}
           fill
-          className="object-fill"
+          className="object-fill "
           alt="ModelImage"
         />
       </div>
-      <div className="w-80 h-100 rounded-4xl bg-amber-300 overflow-hidden relative">
+      <div className="w-100 h-100 rounded-4xl overflow-hidden relative shadow-md">
         <div
           className={cn(
             "z-50 p-2 m-3 relative w-24 bg-white rounded-full flex justify-center items-center",
             quicksand.className,
           )}
         >
-          Hairstyles
+          <h1 className="font-bold">
+            Hairstyles
+          </h1>
         </div>
         <Image
           src={"/cm3.jpg"}
@@ -41,14 +45,16 @@ export default function Modal() {
           alt="ModelImage"
         />
       </div>
-      <div className="w-80 h-80 rounded-4xl bg-amber-300 overflow-hidden relative">
+      <div className="w-100 h-80 rounded-4xl  overflow-hidden relative shadow-md">
            <div
           className={cn(
             "z-50 p-2 m-3 relative w-24 bg-white rounded-full flex justify-center items-center",
             quicksand.className,
           )}
         >
-          Haircolor
+          <h1 className="font-bold">
+            Haircolor
+          </h1>
         </div>
         <Image
           src={"/corousalmodel.jpg"}
