@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import { Quicksand } from "next/font/google";
-import { cn } from "@/lib/utils";
+import { cn } from "@/app/lib/utils";
 import { Calendar } from "@/app/components/calendar";
 
 const quicksand = Quicksand({
