@@ -13,6 +13,7 @@
   display: none;                /* Chrome/Safari */
 }
 @theme{
+  --color-card-brown:#f4ede5;
   --color-cal-brown:#e8dfd2;
   --color-background-white:#faf4f0;
   --color-jbb2-brown:#755a40

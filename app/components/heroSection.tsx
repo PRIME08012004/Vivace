@@ -36,7 +36,7 @@ export default function Hero(){
               Get Hair Style
             </h1>
             <h1 className="text-white text-7xl font-semibold">You Deserve</h1>
-            <button className="rounded-full bg-bb-red text-white px-6 py-3 cursor-pointer">
+            <button className="rounded-full bg-bb-red hover:bg-rose-900 text-white px-6 py-3 cursor-pointer">
               Book Appointment
             </button>
             <p className="text-white text-base max-w-sm pt-8 pb-16">
