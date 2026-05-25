@@ -5,7 +5,7 @@ export default function FacebookIcon() {
       width="24"
       height="24"
       fill="currentColor"
-      className="bi bi-facebook m-2  text-gray-400 hover:text-white"
+      className="bi bi-facebook m-2  text-gray-400 hover:text-white cursor-pointer"
       viewBox="0 0 16 16"
       
     >
