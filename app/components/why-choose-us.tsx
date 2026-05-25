@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function WhyChooseUs() {
   return (
-    <div className="w-full h-120 text-white  bg-wcu-red flex justify-evenly pl-24 p-10">
+    <div className="w-full h-120 text-white  bg-wcu-red flex justify-evenly  p-24 ">
       <div className=" basis-1/3 flex flex-col p-4">
         <div>
           <h1 className="text-6xl font-medium pb-6 pt-8"> Why Choose Us</h1>
         </div>
         <div>
          
-          <p className="pb-32">
+          <p className="">
             Step in looking good. Walk out feeling unstoppable.
           </p>
         </div>

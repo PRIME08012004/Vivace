@@ -19,7 +19,7 @@ export default function Card({
   onClick,
 }: CardProps) {
   return (
-    <div className="relative flex items-center rounded-3xl overflow-hidden bg-white w-64 h-36 ">
+    <div className="relative flex items-center rounded-3xl overflow-hidden bg-white w-70 h-40 ">
 
   
       {imagePosition === "left" && (

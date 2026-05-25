@@ -1,7 +1,7 @@
 export default function ProductCard() {
   return (
     <div className="w-full  flex  gap-12 pt-16 pb-20">
-      <div className="bg-card-brown rounded-2xl overflow-hidden shadow-md w-100">
+      <div className="bg-card-brown rounded-4xl overflow-hidden shadow-md w-100">
         <div className="h-80 w-full flex justify-evenly">
           <img
             src="/conditioner.png"
@@ -17,7 +17,7 @@ export default function ProductCard() {
           <p className="text-black text-md">2.39$</p>
         </div>
       </div>
-      <div className="bg-card-brown rounded-2xl overflow-hidden shadow-md w-100">
+      <div className="bg-card-brown rounded-4xl overflow-hidden shadow-md w-100">
         <div className="h-80 w-full flex justify-evenly">
           <img
             src="/cream.png"
@@ -33,7 +33,7 @@ export default function ProductCard() {
           <p className="text-black text-md">1.69$</p>
         </div>
       </div>
-      <div className="bg-card-brown rounded-2xl overflow-hidden shadow-md w-100">
+      <div className="bg-card-brown rounded-4xl overflow-hidden shadow-md w-100">
         <div className="h-80 w-full flex justify-evenly">
           <img
             src="/Exoil-serum.png"
@@ -49,12 +49,12 @@ export default function ProductCard() {
           <p className="text-black text-md">2.69$</p>
         </div>
       </div>
-      <div className="bg-card-brown rounded-2xl overflow-hidden shadow-md w-100">
+      <div className="bg-card-brown rounded-4xl overflow-hidden shadow-md w-100">
         <div className="h-80 w-full flex justify-evenly">
           <img
             src="/shampoo.png"
             alt="product"
-            className="w-full h-full object-contain p-4"
+            className="w-full h-full object-contain p-4" 
           />
         </div>
 

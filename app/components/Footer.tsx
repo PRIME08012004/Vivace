@@ -1,11 +1,15 @@
-export default function Footer(){
 
-    return(<>
-    
-    <div>
-        this is footer
-    </div>
-    
-    
-    </>)
+
+export default function Footer() {
+  return (
+    <>
+      <div className="">
+        <div>
+        
+        </div>
+        <div></div>
+        <div></div>
+      </div>
+    </>
+  );
 }
