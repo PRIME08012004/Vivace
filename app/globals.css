@@ -13,6 +13,8 @@
   display: none;                /* Chrome/Safari */
 }
 @theme{
+  --color-gray-16:#1e1e1e;
+  --color-gray-15:#3f3f3f;
   --color-wcu-rose:#ba1338;
   --color-wcu-red:#a80028;
   --color-card-brown:#f4ede5;
