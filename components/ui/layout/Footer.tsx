@@ -1,12 +1,12 @@
 import Image from "next/image";
-import FacebookIcon from "./icons/facebook";
-import InstagramIcon from "./icons/instagram";
-import XIcon from "./icons/x";
-import YoutubeIcon from "./icons/youtube";
-import LinkedIcon from "./icons/linked";
+import FacebookIcon from "../icons/facebook";
+import InstagramIcon from "../icons/instagram";
+import XIcon from "../icons/x";
+import YoutubeIcon from "../icons/youtube";
+import LinkedIcon from "../icons/linked";
 import { Monoton } from "next/font/google";
 import { cn } from "@/lib/utils";
-import Arrow from "./icons/arrowRight";
+import Arrow from "../icons/arrowRight";
 
 const monoton = Monoton({
   weight: ["400"],

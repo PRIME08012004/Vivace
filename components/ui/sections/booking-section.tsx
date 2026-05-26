@@ -1,8 +1,8 @@
 import { Quicksand } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { CalComponent } from "./cal-component";
+import { CalComponent } from "../cal-component";
 import Image from "next/image";
-import ContactUsForm from "./form";
+import ContactUsForm from "../form";
 
 const quicksand = Quicksand({
   weight: "400",

@@ -2,7 +2,7 @@ import { Monoton } from "next/font/google";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Quicksand } from "next/font/google";
-import BB from "./icons/burgerbutton";
+import BB from "../icons/burgerbutton";
 const monoton = Monoton({
   weight: ["400"],
 });

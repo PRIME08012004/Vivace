@@ -1,12 +1,12 @@
-import Hero from "@/components/heroSection";
-import OurServices from "@/components/our-services";
-import Booking from "@/components/booking-section";
-import ProductView from "@/components/product-section";
+import Hero from "@/components/ui/sections/heroSection";
+import OurServices from "@/components/ui/sections/our-services-section";
+import Booking from "@/components/ui/sections/booking-section";
+import ProductView from "@/components/ui/sections/product-section";
 import { Quicksand } from "next/font/google";
 import { cn } from "@/lib/utils";
-import WhyChooseUs from "../components/why-choose-us";
-import OurTeam from "../components/our-team-section";
-import Footer from "../components/Footer";
+import WhyChooseUs from "../components/ui/sections/why-choose-us";
+import OurTeam from "../components/ui/sections/our-team-section";
+import Footer from "../components/ui/layout/Footer";
 
 
 const quicksand=Quicksand({

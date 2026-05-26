@@ -1,4 +1,4 @@
-import ProductCard from "./product-section-card";
+import ProductCard from "@/components/ui/product-section-card";
 
 export default function ProductView() {
   return (
