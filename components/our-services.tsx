@@ -1,6 +1,6 @@
 import { Quicksand } from "next/font/google";
-import { cn } from "../lib/utils";
-import Modal from '@/app/components/modalCard'
+import { cn } from "@/lib/utils";
+import Modal from '@/components/modalCard'
 const quicksand = Quicksand({
   weight: ["400", "700"],
 });

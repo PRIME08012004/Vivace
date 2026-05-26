@@ -5,7 +5,7 @@ import XIcon from "./icons/x";
 import YoutubeIcon from "./icons/youtube";
 import LinkedIcon from "./icons/linked";
 import { Monoton } from "next/font/google";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
 const monoton = Monoton({
   weight: ["400"],

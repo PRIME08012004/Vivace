@@ -1,13 +1,13 @@
 
-import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 
 import { Quicksand } from "next/font/google";
-import { AnimatedTooltipPreview } from "@/app/components/heroCard";
-import { cn } from "@/app/lib/utils";
+import { AnimatedTooltipPreview } from "@/components/heroCard";
+import { cn } from "@/lib/utils";
 
-import Card from "@/app/components/Card";
+import Card from "@/components/Card";
 
 
 const quicksand = Quicksand({

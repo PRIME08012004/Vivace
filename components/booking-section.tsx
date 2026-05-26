@@ -1,5 +1,5 @@
 import { Quicksand } from "next/font/google";
-import { cn } from "@/app/lib/utils";
+import { cn } from "@/lib/utils";
 import { CalComponent } from "./cal-component";
 import Image from "next/image";
 import ContactUsForm from "./form";

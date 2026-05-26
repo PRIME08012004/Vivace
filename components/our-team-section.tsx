@@ -1,5 +1,5 @@
 
-import  OurTeamcard from "@/app/components/hair-dresser-card";
+import  OurTeamcard from "@/components/hair-dresser-card";
 
 
 export default function OurTeam(){

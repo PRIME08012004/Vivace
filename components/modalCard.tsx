@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Quicksand } from "next/font/google";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
 const quicksand = Quicksand({
   weight: ["400"],

@@ -3,8 +3,8 @@
 import * as React from "react";
 
 import { Quicksand } from "next/font/google";
-import { cn } from "@/app/lib/utils";
-import { Calendar } from "@/app/components/calendar";
+import { cn } from "@/lib/utils";
+import { Calendar } from "@/components/calendar";
 
 const quicksand = Quicksand({
   weight: "400",
