@@ -4,6 +4,12 @@ import InstagramIcon from "./icons/instagram";
 import XIcon from "./icons/x";
 import YoutubeIcon from "./icons/youtube";
 import LinkedIcon from "./icons/linked";
+import { Monoton } from "next/font/google";
+import { cn } from "../lib/utils";
+
+const monoton = Monoton({
+  weight: ["400"],
+});
 
 export default function Footer() {
   return (
@@ -43,17 +49,29 @@ export default function Footer() {
               </h2>
               <h2 className="pb-2">Mumbai - 400 006 Maharashtra, India</h2>
               <div className="pt-4 flex gap-8 ">
-                  <FacebookIcon/>
-                  <InstagramIcon/>
-                  <XIcon/>
-                  <YoutubeIcon/>
-                  <LinkedIcon/>
+                <FacebookIcon />
+                <InstagramIcon />
+                <XIcon />
+                <YoutubeIcon />
+                <LinkedIcon />
               </div>
             </div>
           </div>
         </div>
         <div>
-        
+         <div className="flex flex-col justify-center items-center">
+           <h1
+            className={cn(
+              monoton.className,
+              " flex-1 flex justify-center items-center text-5xl py-3 text-white pb-6",
+            )}
+          >
+            Vivace
+          </h1>
+          <button className="bg-white rounded-full px-4 py-2 mb-30">Book Your Consultation</button>
+
+          <h1 className="text-white text-2xl">Subscribe to the newsletter</h1>
+         </div>
         </div>
       </div>
     </>
