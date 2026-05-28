@@ -1,7 +1,8 @@
-
+"use client"
 import Navbar from "@/components/ui/layout/Navbar";
 import Footer from "@/components/ui/layout/Footer";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import { Quicksand } from "next/font/google";
 import { AnimatedTooltipPreview } from "@/components/ui/heroCard";
@@ -16,6 +17,8 @@ const quicksand = Quicksand({
 
 
 export default function Hero(){
+
+  const router=useRouter()
 
     return( <section className="h-screen w-full relative overflow-hidden ">
         <Image
@@ -36,7 +39,9 @@ export default function Hero(){
               Get Hair Style
             </h1>
             <h1 className="text-white text-7xl font-semibold">You Deserve</h1>
-            <button className="rounded-full bg-bb-red hover:bg-rose-900 text-white px-6 py-3 cursor-pointer">
+            <button className="rounded-full bg-bb-red hover:bg-rose-900 text-white px-6 py-3 cursor-pointer" onClick={()=>{
+              router.push("/booking")
+            }}>
               Book Appointment
             </button>
             <p className="text-white text-base max-w-sm pt-8 pb-16">

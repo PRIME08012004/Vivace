@@ -1,10 +1,12 @@
 import GoogleLogo from "@/components/ui/icons/google-logo"
-
-
-
+import { Quicksand } from "next/font/google"
+import { cn } from "@/lib/utils"
+const quicksand=Quicksand({
+  weight:"400"
+})
 export default function SignIn(){
     return(
-        <div className=" flex min-h-screen w-full items-center justify-center bg-white px-4 dark:bg-neutral-950 flex-col">
+        <div className={cn(quicksand.className," flex min-h-screen w-full items-center justify-center bg-black px-4 dark:bg-neutral-950 flex-col")}>
       <div className="w-full max-w-md  p-4 m-2 rounded-2xl shadow-xl/20 shadow-slate-50 ">
         <h1
           className="font-medium
@@ -28,7 +30,7 @@ export default function SignIn(){
                 <label htmlFor="" className="m-1 text-sm flex justify-start text-slate-50">
                   Password
                 </label>
-                <a href="" className="hover:text-gray-500 m-1">
+                <a href="" className="hover:text-gray-500 m-1 text-white">
                   Forget?
                 </a>
               </div>
