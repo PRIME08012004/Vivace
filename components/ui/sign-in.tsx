@@ -6,7 +6,7 @@ const quicksand=Quicksand({
 })
 export default function SignIn(){
     return(
-        <div className={cn(quicksand.className," flex min-h-screen w-full items-center justify-center bg-gray-15 px-4 dark:bg-neutral-950 flex-col")}>
+        <div className={cn(quicksand.className," flex min-h-screen w-full items-center justify-center  px-4 dark:bg-neutral-950 flex-col")}>
       <div className="w-full max-w-md  p-4 m-2 rounded-2xl shadow-xl/20 shadow-slate-50 ">
         <h1
           className="font-medium
