@@ -1,23 +1,24 @@
 name: Build on PR
 
 on:
-  pull_Request:
+  pull_request:
     branches:
-      -master
-      -main
+      - master
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js
-      - uses: actions/setup-node@v3
-        with:
-            node-version: '20'
 
-      - name: Install Dependency
-        run: npm Install
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
 
       - name: Run Build
-        run: npm run build  
+        run: npm run build
