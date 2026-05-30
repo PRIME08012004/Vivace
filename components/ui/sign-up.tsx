@@ -3,7 +3,7 @@ import GoogleLogo from "@/components/ui/icons/google-logo"
 import { Quicksand } from "next/font/google"
 import { cn } from "@/lib/utils"
 import { useRouter } from "next/navigation";
-
+import Link from "next/link";
 
 
 const quicksand=Quicksand({
@@ -25,6 +25,12 @@ export default function SignIn(){
           Welcome back! Please enter your details.
         </p>
         <form className="flex flex-col w-full">
+             <label className="text-sm flex justify-start m-1 text-slate-50">Full Name</label>
+          <input
+            type="text"
+            className="mb-4 rounded-lg px-4 py-3 bg-neutral-800 text-gray-500 w-full"
+            placeholder="Enter Full Name"
+          />
           <label className="text-sm flex justify-start m-1 text-slate-50">Email</label>
           <input
             type="text"
@@ -37,9 +43,7 @@ export default function SignIn(){
                 <label htmlFor="" className="m-1 text-sm flex justify-start text-slate-50">
                   Password
                 </label>
-                <a href="" className="hover:text-gray-500 m-1 text-white">
-                  Forget?
-                </a>
+             
               </div>
               <input
                 type="password"
@@ -51,8 +55,8 @@ export default function SignIn(){
           <button className="ring-2 ring-slate-300 bg-white rounded-lg text-black py-2 cursor-pointer mt-2">
             Sign In
           </button>
-          <p className=" pt-4 flex justify-center text-gray-500">Don't have account ?<span className="pl-1 text-white hover:text-gray-500 hover:underline cursor-pointer" onClick={()=>{
-            router?.push("/signup")
+          <p className=" pt-4 flex justify-center text-gray-500">Already have an account ?<span className="pl-1 text-white hover:text-gray-500 hover:underline cursor-pointer" onClick={()=>{
+            router?.push("/signin")
           }}>Sign Up</span></p>
 
           <div className="flex items-center gap-2 py-4">
