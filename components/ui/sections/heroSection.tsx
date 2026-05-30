@@ -46,7 +46,7 @@ export default function Hero(){
             </button>
             <p className="text-white text-base max-w-sm pt-8 pb-16">
               Discover a world of sophistication and personalized beauty at
-              Vivace. Our salon is more than just a place for haircuts; it's a
+              Vivace. Our salon is more than just a place for haircuts; it&pos;s a
               haven where your unique style takes center stage.
             </p>
             <div className="flex justify-center gap-2">

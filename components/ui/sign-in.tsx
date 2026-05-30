@@ -51,7 +51,7 @@ export default function SignIn(){
           <button className="ring-2 ring-slate-300 bg-white rounded-lg text-black py-2 cursor-pointer mt-2">
             Sign In
           </button>
-          <p className=" pt-4 flex justify-center text-gray-500">Don't have account ?<span className="pl-1 text-white hover:text-gray-500 hover:underline cursor-pointer" onClick={()=>{
+          <p className=" pt-4 flex justify-center text-gray-500"> Don&apos;t have account ?<span className="pl-1 text-white hover:text-gray-500 hover:underline cursor-pointer" onClick={() =>{
             router?.push("/signup")
           }}>Sign Up</span></p>
 

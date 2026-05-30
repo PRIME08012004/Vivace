@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "db:generate":"npx prisma generate"
+    "db:generate":"npx prisma generate",
+    "lint:check": "eslint --max-warnings 0 --config .eslintrc .",
+    "lint:fix": "eslint --max-warnings 0 --config .eslintrc . --fix",
+    "format:fix": "prettier --write \"**/*.{ts,tsx,json}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,json}\""
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
