@@ -1,10 +1,17 @@
+"use client"
 import GoogleLogo from "@/components/ui/icons/google-logo"
 import { Quicksand } from "next/font/google"
 import { cn } from "@/lib/utils"
+import { useRouter } from "next/router";
+import Link from "next/link";
+
+
 const quicksand=Quicksand({
   weight:"400"
 })
 export default function SignIn(){
+  const router=useRouter()
+
     return(
         <div className={cn(quicksand.className," flex min-h-screen w-full items-center justify-center bg-gray-16 px-4 dark:bg-neutral-950 flex-col")}>
       <div className="w-full max-w-md  p-4 m-2 rounded-2xl shadow-xl/20 shadow-slate-50 ">
@@ -44,6 +51,10 @@ export default function SignIn(){
           <button className="ring-2 ring-slate-300 bg-white rounded-lg text-black py-2 cursor-pointer mt-2">
             Sign In
           </button>
+          <p className=" pt-4 flex justify-center text-gray-500">Don't have account ?<span className="pl-1 text-white hover:text-gray-500 hover:underline cursor-pointer" onClick={()=>{
+            router.push("/user/signup")
+          }}>Sign Up</span></p>
+
           <div className="flex items-center gap-2 py-4">
             <div className="flex-1 h-px bg-neutral-700" />
             <span className="text-sm text-gray-400">OR</span>
