@@ -1,4 +1,4 @@
-import SignIn from "@/components/ui/sign-in";
+import SignUp from "@/components/ui/sign-up";
 
 export default function main(){
 
@@ -6,7 +6,7 @@ export default function main(){
 
     return(
         <div className="">
-         
+            <SignUp/>
         </div>
     )
 }
