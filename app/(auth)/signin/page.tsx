@@ -5,8 +5,8 @@ export default function main(){
 
 
     return(
-        <div className="">
+
             <SignIn/>
-        </div>
+        
     )
 }
