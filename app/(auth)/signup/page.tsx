@@ -5,8 +5,10 @@ export default function main(){
 
 
     return(
-       
-            <SignUp/>
+        <>  
+         <SignUp/>
+        </>
+           
        
     )
 }
