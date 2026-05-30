@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "db:generate":"npx prisma generate",
-    "lint:check": "eslint --max-warnings 0 --config .eslintrc .",
-    "lint:fix": "eslint --max-warnings 0 --config .eslintrc . --fix",
+    "db:generate": "npx prisma generate",
+    "lint:check": "ESLINT_USE_FLAT_CONFIG=false eslint --max-warnings 0 --config .eslintrc .",
+    "lint:fix": "ESLINT_USE_FLAT_CONFIG=false eslint --max-warnings 0 --config .eslintrc . --fix",
     "format:fix": "prettier --write \"**/*.{ts,tsx,json}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,json}\""
   },
