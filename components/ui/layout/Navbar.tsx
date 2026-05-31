@@ -45,8 +45,15 @@ export default function Navbar() {
         </h1>
 
         <div className="flex-1 flex justify-end items-center p-4 gap-2 m-2">
-            <button className={cn(quicksand.className,"rounded-full bg-white text-black px-6 py-3 cursor-pointer ")}>Contact Us</button>
-            <BB/>
+          <button
+            className={cn(
+              quicksand.className,
+              "rounded-full bg-white text-black px-6 py-3 cursor-pointer ",
+            )}
+          >
+            Contact Us
+          </button>
+          <BB />
         </div>
       </div>
     </>

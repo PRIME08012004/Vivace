@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 export const useOutsideClick = (
   ref: React.RefObject<HTMLDivElement>,
   // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
-  callback: Function
+  callback: Function,
 ) => {
   useEffect(() => {
     const listener = (event: any) => {

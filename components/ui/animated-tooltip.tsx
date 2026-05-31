@@ -17,7 +17,7 @@ export const AnimatedTooltip = ({
     id: number;
     name: string;
     designation: string;
-    image: string | React.ReactNode; 
+    image: string | React.ReactNode;
   }[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -34,7 +34,9 @@ export const AnimatedTooltip = ({
     springConfig,
   );
 
-  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement | HTMLImageElement>) => {
+  const handleMouseMove = (
+    event: React.MouseEvent<HTMLDivElement | HTMLImageElement>,
+  ) => {
     if (animationFrameRef.current) {
       cancelAnimationFrame(animationFrameRef.current);
     }
@@ -75,7 +77,6 @@ export const AnimatedTooltip = ({
             )}
           </AnimatePresence>
 
-       
           {typeof item.image === "string" ? (
             <Image
               onMouseMove={handleMouseMove}
@@ -93,7 +94,6 @@ export const AnimatedTooltip = ({
               {item.image}
             </div>
           )}
-
         </div>
       ))}
     </>

@@ -1,11 +1,3 @@
-
-
-export default function DoneLottie(){
-
-
-    return(
-        <div>
-            
-        </div>
-    )
+export default function DoneLottie() {
+  return <div></div>;
 }

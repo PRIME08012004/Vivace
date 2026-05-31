@@ -16,7 +16,7 @@ export default function ProductView() {
         </div>
       </div>
       <div>
-        <ProductCard/>
+        <ProductCard />
       </div>
     </div>
   );

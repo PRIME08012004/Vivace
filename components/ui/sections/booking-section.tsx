@@ -21,7 +21,6 @@ export default function Booking() {
           <Image
             src={"/hm4.png"}
             alt="Hair Model"
-           
             width={380}
             height={300}
             className="rounded-4xl mt-8 object-fill "
@@ -32,7 +31,7 @@ export default function Booking() {
         <CalComponent />
       </div>
       <div className="w-130  ">
-        <ContactUsForm/>
+        <ContactUsForm />
       </div>
     </div>
   );

@@ -55,7 +55,7 @@ export default function ProductCard() {
           <Image
             src="/shampoo.png"
             alt="product"
-            className="w-full h-full object-contain p-4" 
+            className="w-full h-full object-contain p-4"
           />
         </div>
 

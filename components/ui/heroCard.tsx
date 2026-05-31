@@ -35,10 +35,8 @@ const people = [
     id: 5,
     name: "Join Our Team",
     designation: "Hair Dresser",
-    image: <Plus /> 
+    image: <Plus />,
   },
-  
-  
 ];
 
 export function AnimatedTooltipPreview() {

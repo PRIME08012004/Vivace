@@ -8,24 +8,21 @@ import WhyChooseUs from "../components/ui/sections/why-choose-us";
 import OurTeam from "../components/ui/sections/our-team-section";
 import Footer from "../components/ui/layout/Footer";
 
-
-const quicksand=Quicksand({
-  weight:["400"]
-})
+const quicksand = Quicksand({
+  weight: ["400"],
+});
 export default function Main() {
   return (
     <div className="">
       <Hero />
-      <div className={cn(quicksand.className,"bg-background-white")}>
+      <div className={cn(quicksand.className, "bg-background-white")}>
         <OurServices />
         <Booking />
-        <ProductView/>
-        <WhyChooseUs/>
-        <OurTeam/>
-        
-        <Footer/>
-       
-        
+        <ProductView />
+        <WhyChooseUs />
+        <OurTeam />
+
+        <Footer />
       </div>
     </div>
   );

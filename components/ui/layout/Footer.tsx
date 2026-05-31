@@ -96,10 +96,9 @@ export default function Footer() {
             <h2 className="cursor-pointer">Terms of Services</h2>
           </div>
           <div className="flex justify-center text-white pr-24">
-             <h1>Copyright &copy; Vivace All Rights Reserved </h1>
+            <h1>Copyright &copy; Vivace All Rights Reserved </h1>
           </div>
         </div>
-       
       </div>
     </>
   );

@@ -16,9 +16,7 @@ export default function Modal() {
             quicksand.className,
           )}
         >
-         <h1 className="font-bold">
-           Haircut
-         </h1>
+          <h1 className="font-bold">Haircut</h1>
         </div>
         <Image
           src={"/corousalmodel2.jpg"}
@@ -34,27 +32,18 @@ export default function Modal() {
             quicksand.className,
           )}
         >
-          <h1 className="font-bold">
-            Hairstyles
-          </h1>
+          <h1 className="font-bold">Hairstyles</h1>
         </div>
-        <Image
-          src={"/cm3.jpg"}
-          fill
-          className="object-fill"
-          alt="ModelImage"
-        />
+        <Image src={"/cm3.jpg"} fill className="object-fill" alt="ModelImage" />
       </div>
       <div className="w-100 h-80 rounded-4xl  overflow-hidden relative shadow-md">
-           <div
+        <div
           className={cn(
             "z-50 p-2 m-3 relative w-24 bg-white rounded-full flex justify-center items-center",
             quicksand.className,
           )}
         >
-          <h1 className="font-bold">
-            Haircolor
-          </h1>
+          <h1 className="font-bold">Haircolor</h1>
         </div>
         <Image
           src={"/corousalmodel.jpg"}

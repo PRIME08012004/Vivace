@@ -1,6 +1,6 @@
 import { Quicksand } from "next/font/google";
 import { cn } from "@/lib/utils";
-import Modal from '@/components/ui/modalCard'
+import Modal from "@/components/ui/modalCard";
 const quicksand = Quicksand({
   weight: ["400", "700"],
 });
@@ -18,13 +18,13 @@ export default function OurServices() {
           <div className="flex flex-col ">
             <h1 className="text-6xl p-4 font-medium">Our Services</h1>
             <p className="p-4">
-              Beyond haircuts, discover a comprehensive<br></br> range of services, from
-              coloring to extensions
+              Beyond haircuts, discover a comprehensive<br></br> range of
+              services, from coloring to extensions
             </p>
           </div>
         </div>
         <div className="w-64 flex-2 p-20">
-            <Modal/>
+          <Modal />
         </div>
       </div>
     </>
