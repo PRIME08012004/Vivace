@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 export default function WhyChooseUs() {
   return (
@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
         <div className="bg-wcu-rose rounded-4xl text-white flex justify-center items-center">
           <div></div>
           <div>
-            We're not just following trends; we're setting them. Step into the<br/>
+            We&apos;re not just following trends; we&apos;re setting them. Step into the<br/>
             latest fashion with our trendsetting styles that keep you ahead of<br/>
             the curve.
           </div>

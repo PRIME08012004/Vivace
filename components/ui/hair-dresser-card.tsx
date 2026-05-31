@@ -3,6 +3,7 @@
 import { useRef } from "react"
 import Arrow from "./icons/arrowRight"
 import ArrowLeft from "./icons/left-arrow"
+import Image from "next/image"
 
 const team = [
   { name: "Oliver Smith", role: "Hairdresser", img: "/image.png" },
@@ -51,7 +52,7 @@ export default function OurTeamcard() {
           {team.map((member, i) => (
             <div key={i} className={`min-w-[280px] shrink-0 `}>
               <div className="rounded-2xl h-80 overflow-hidden">
-                <img src={member.img} className="w-full h-full object-cover" />
+                <Image alt={"Image"}src={member.img} className="w-full h-full object-cover" />
               </div>
               <p className="font-semibold text-gray-900 mt-3">{member.name}</p>
               <p className="text-sm text-black">{member.role}</p>

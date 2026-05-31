@@ -1,9 +1,10 @@
+import Image from "next/image";
 export default function ProductCard() {
   return (
     <div className="w-full  flex  gap-12 pt-16 pb-20">
       <div className="bg-card-brown rounded-4xl overflow-hidden shadow-md w-100">
         <div className="h-80 w-full flex justify-evenly">
-          <img
+          <Image
             src="/conditioner.png"
             alt="product"
             className="w-full h-full object-contain p-4"
@@ -19,7 +20,7 @@ export default function ProductCard() {
       </div>
       <div className="bg-card-brown rounded-4xl overflow-hidden shadow-md w-100">
         <div className="h-80 w-full flex justify-evenly">
-          <img
+          <Image
             src="/cream.png"
             alt="product"
             className="w-full h-full object-contain p-4"
@@ -35,7 +36,7 @@ export default function ProductCard() {
       </div>
       <div className="bg-card-brown rounded-4xl overflow-hidden shadow-md w-100">
         <div className="h-80 w-full flex justify-evenly">
-          <img
+          <Image
             src="/Exoil-serum.png"
             alt="product"
             className="w-full h-full object-contain p-4"
@@ -44,14 +45,14 @@ export default function ProductCard() {
 
         <div className="p-4">
           <h2 className="text-lg font-medium">
-            L'Oréal Paris Extraordinary Oil Serum
+            L&apos;Oréal Paris Extraordinary Oil Serum
           </h2>
           <p className="text-black text-md">2.69$</p>
         </div>
       </div>
       <div className="bg-card-brown rounded-4xl overflow-hidden shadow-md w-100">
         <div className="h-80 w-full flex justify-evenly">
-          <img
+          <Image
             src="/shampoo.png"
             alt="product"
             className="w-full h-full object-contain p-4" 
@@ -60,7 +61,7 @@ export default function ProductCard() {
 
         <div className="p-4">
           <h2 className="text-lg font-medium">
-            L'Oréal Paris Total Repair 5 Repairing Shampoo
+            L&apos;Oréal Paris Total Repair 5 Repairing Shampoo
           </h2>
           <p className="text-black text-md">3.00$</p>
         </div>

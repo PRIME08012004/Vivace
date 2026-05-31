@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/ui/layout/Navbar";
-import Footer from "../components/ui/layout/Footer";
-import { Quicksand } from "next/font/google";
-const quicksand = Quicksand({
-  weight: ["400"],
-});
+
+
 
 
 const geistSans = Geist({
