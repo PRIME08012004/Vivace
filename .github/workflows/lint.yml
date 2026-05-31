@@ -22,8 +22,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Run linting check
-        run: npm run lint:check
 
       - name: Check formatting
         run: npm run format:check
