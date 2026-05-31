@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "db:generate": "npx prisma generate",
-   "lint:check": "eslint --max-warnings 0 .",
-"lint:fix": "eslint --max-warnings 0 . --fix",
+    "lint:check": "eslint --max-warnings 0 .",
+    "lint:fix": "eslint --max-warnings 0 . --fix",
     "format:fix": "prettier --write \"**/*.{ts,tsx,json}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,json}\""
   },
