@@ -1,3 +1,3 @@
 export default function Careers() {
-  return <></>;
+  return <>this is career page</>;
 }
