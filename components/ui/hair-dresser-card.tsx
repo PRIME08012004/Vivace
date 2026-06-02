@@ -61,6 +61,8 @@ export default function OurTeamcard() {
             <div key={i} className={`min-w-[280px] shrink-0 `}>
               <div className="rounded-2xl h-80 overflow-hidden">
                 <Image
+                  width={400}
+                  height={600}
                   alt={"Image"}
                   src={member.img}
                   className="w-full h-full object-cover"

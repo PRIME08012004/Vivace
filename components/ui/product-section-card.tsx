@@ -5,6 +5,8 @@ export default function ProductCard() {
       <div className="bg-card-brown rounded-4xl overflow-hidden shadow-md w-100">
         <div className="h-80 w-full flex justify-evenly">
           <Image
+            width={400}
+            height={600}
             src="/conditioner.png"
             alt="product"
             className="w-full h-full object-contain p-4"
@@ -21,6 +23,8 @@ export default function ProductCard() {
       <div className="bg-card-brown rounded-4xl overflow-hidden shadow-md w-100">
         <div className="h-80 w-full flex justify-evenly">
           <Image
+            width={400}
+            height={600}
             src="/cream.png"
             alt="product"
             className="w-full h-full object-contain p-4"
@@ -37,6 +41,8 @@ export default function ProductCard() {
       <div className="bg-card-brown rounded-4xl overflow-hidden shadow-md w-100">
         <div className="h-80 w-full flex justify-evenly">
           <Image
+            width={400}
+            height={600}
             src="/Exoil-serum.png"
             alt="product"
             className="w-full h-full object-contain p-4"
@@ -53,6 +59,8 @@ export default function ProductCard() {
       <div className="bg-card-brown rounded-4xl overflow-hidden shadow-md w-100">
         <div className="h-80 w-full flex justify-evenly">
           <Image
+            width={400}
+            height={600}
             src="/shampoo.png"
             alt="product"
             className="w-full h-full object-contain p-4"

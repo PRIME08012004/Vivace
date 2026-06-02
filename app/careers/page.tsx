@@ -1,10 +1,3 @@
-export default function Careers(){
-
-
-    return(
-        <>
-        
-        
-        </>
-    )
+export default function Careers() {
+  return <></>;
 }
