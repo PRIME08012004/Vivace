@@ -1,16 +1,41 @@
+"use client";
 import { Monoton } from "next/font/google";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Quicksand } from "next/font/google";
 import BB from "../icons/burgerbutton";
-const monoton = Monoton({
-  weight: ["400"],
-});
-const quicksand = Quicksand({
-  weight: ["400"],
-});
+import { useEffect, useState } from "react";
+
+const monoton = Monoton({ weight: ["400"] });
+const quicksand = Quicksand({ weight: ["400"] });
 
 export default function Navbar() {
+  const [isLight, setIsLight] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Adjust this threshold based on where your light section starts
+      setIsLight(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const textColor = isLight ? "black" : "white";
+  const subTextColor = isLight ? "rgba(0,0,0,0.7)" : "rgba(255,255,255,0.8)";
+  const navBg = isLight
+    ? "rgba(255, 255, 255, 0.45)"
+    : "rgba(255, 255, 255, 0.08)";
+  const borderColor = isLight
+    ? "rgba(0, 0, 0, 0.12)"
+    : "rgba(255, 255, 255, 0.15)";
+  const buttonBg = isLight
+    ? "rgba(0, 0, 0, 0.08)"
+    : "rgba(255, 255, 255, 0.15)";
+  const buttonBorder = isLight
+    ? "rgba(0, 0, 0, 0.2)"
+    : "rgba(255, 255, 255, 0.25)";
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Our Team", href: "/services" },
@@ -19,43 +44,85 @@ export default function Navbar() {
   ];
 
   return (
-    <>
-      <div className="flex relative z-10 text-white">
+    <div
+      className={cn(
+        "fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[98vw] max-w-screen",
+        quicksand.className,
+      )}
+    >
+      <div
+        className="flex items-center rounded-2xl px-4 transition-all duration-500"
+        style={{
+          background: navBg,
+          backdropFilter: "blur(24px) saturate(180%)",
+          WebkitBackdropFilter: "blur(24px) saturate(180%)",
+          border: `1px solid ${borderColor}`,
+          boxShadow:
+            "0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -1px 0 rgba(0,0,0,0.1)",
+        }}
+      >
+        {/* Nav links */}
         <div className="flex-1">
-          <ul
-            className={cn(
-              quicksand.className,
-              "flex justify-items-start gap-16 p-4 m-2 px-12 ",
-            )}
-          >
-            {navLinks.map((links) => (
-              <li className="flex hover:text-gray-400" key={links.name}>
-                <Link href={links.href}>{links.name}</Link>
+          <ul className={cn(quicksand.className, "flex gap-8 p-3 px-4")}>
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <Link
+                  href={link.href}
+                  className="text-sm relative group transition-colors duration-500"
+                  style={{ color: subTextColor }}
+                >
+                  {link.name}
+                  <span
+                    className="absolute -bottom-0.5 left-0 w-0 h-px group-hover:w-full transition-all duration-300"
+                    style={{ background: textColor }}
+                  />
+                </Link>
               </li>
             ))}
           </ul>
         </div>
+
+        {/* Logo */}
         <h1
           className={cn(
             monoton.className,
-            " flex-1 flex justify-center items-center text-7xl py-3",
+            "flex-1 flex justify-center items-center text-5xl py-3 select-none transition-colors duration-500",
           )}
+          style={{ color: textColor }}
         >
           Vivace
         </h1>
 
-        <div className="flex-1 flex justify-end items-center p-4 gap-2 m-2">
+        {/* Actions */}
+        <div className="flex-1 flex justify-end items-center gap-3 p-3">
           <button
             className={cn(
               quicksand.className,
-              "rounded-full bg-white text-black px-6 py-3 cursor-pointer ",
+              "text-sm cursor-pointer transition-all duration-500 rounded-full px-5 py-2",
             )}
+            style={{
+              background: buttonBg,
+              border: `1px solid ${buttonBorder}`,
+              backdropFilter: "blur(8px)",
+              WebkitBackdropFilter: "blur(8px)",
+              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.2)",
+              color: textColor,
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.background = isLight
+                ? "rgba(0,0,0,0.15)"
+                : "rgba(255,255,255,0.25)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.background =
+                buttonBg;
+            }}
           >
             Contact Us
           </button>
           <BB />
         </div>
       </div>
-    </>
+    </div>
   );
 }
