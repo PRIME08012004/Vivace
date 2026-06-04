@@ -1,5 +1,4 @@
 "use client";
-import Navbar from "@/components/ui/layout/Navbar";
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -25,7 +24,7 @@ export default function Hero() {
         fill
         className="object-fill "
       />
-      {/* <Navbar /> */}
+
       <div
         className={cn(
           quicksand.className,

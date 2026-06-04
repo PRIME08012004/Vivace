@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Monoton } from "next/font/google";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -44,7 +44,12 @@ export default function Navbar() {
   ];
 
   return (
-    <div className={cn("fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[98vw] max-w-screen",quicksand.className)}>
+    <div
+      className={cn(
+        "fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[98vw] max-w-screen",
+        quicksand.className,
+      )}
+    >
       <div
         className="flex items-center rounded-2xl px-4 transition-all duration-500"
         style={{
@@ -109,7 +114,8 @@ export default function Navbar() {
                 : "rgba(255,255,255,0.25)";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.background = buttonBg;
+              (e.currentTarget as HTMLButtonElement).style.background =
+                buttonBg;
             }}
           >
             Contact Us

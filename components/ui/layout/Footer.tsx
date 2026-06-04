@@ -11,13 +11,18 @@ import Arrow from "../icons/arrowRight";
 const monoton = Monoton({
   weight: ["400"],
 });
-const quicksand=Quicksand({
-  weight:"400"
-})
+const quicksand = Quicksand({
+  weight: "400",
+});
 export default function Footer() {
   return (
     <>
-      <div className={cn("bg-gray-16 w-full overflow-hidden flex justify-evenly p-24",quicksand.className)}>
+      <div
+        className={cn(
+          "bg-gray-16 w-full overflow-hidden flex justify-evenly p-24",
+          quicksand.className,
+        )}
+      >
         <div className="relative rounded-4xl">
           <Image
             src={"/image copy 5.png"}
@@ -89,7 +94,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className={cn("w-full  bg-gray-16 ",quicksand.className)}>
+      <div className={cn("w-full  bg-gray-16 ", quicksand.className)}>
         <hr className="border-t bg-[#5f5f5f] opacity-50" />
         <div className="flex justify-between p-2 pl-24 pb-4">
           <div className="flex gap-8 text-white ">

@@ -6,16 +6,11 @@ import { Quicksand } from "next/font/google";
 import { cn } from "@/lib/utils";
 import WhyChooseUs from "../components/ui/sections/why-choose-us";
 import OurTeam from "../components/ui/sections/our-team-section";
-import Footer from "../components/ui/layout/Footer";
 
 const quicksand = Quicksand({
   weight: ["400"],
 });
 export default function Main() {
-
-
-
-  
   return (
     <div className="">
       <Hero />
@@ -25,8 +20,6 @@ export default function Main() {
         <ProductView />
         <WhyChooseUs />
         <OurTeam />
-
-     
       </div>
     </div>
   );
