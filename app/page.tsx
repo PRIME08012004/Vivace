@@ -12,6 +12,10 @@ const quicksand = Quicksand({
   weight: ["400"],
 });
 export default function Main() {
+
+
+
+  
   return (
     <div className="">
       <Hero />
@@ -22,7 +26,7 @@ export default function Main() {
         <WhyChooseUs />
         <OurTeam />
 
-        <Footer />
+     
       </div>
     </div>
   );
