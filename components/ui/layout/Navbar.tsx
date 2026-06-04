@@ -61,7 +61,7 @@ export default function Navbar() {
             "0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -1px 0 rgba(0,0,0,0.1)",
         }}
       >
-        {/* Nav links */}
+     
         <div className="flex-1">
           <ul className={cn(quicksand.className, "flex gap-8 p-3 px-4")}>
             {navLinks.map((link) => (
@@ -82,7 +82,7 @@ export default function Navbar() {
           </ul>
         </div>
 
-        {/* Logo */}
+    
         <h1
           className={cn(
             monoton.className,
@@ -93,7 +93,6 @@ export default function Navbar() {
           Vivace
         </h1>
 
-        {/* Actions */}
         <div className="flex-1 flex justify-end items-center gap-3 p-3">
           <button
             className={cn(
