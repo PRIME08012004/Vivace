@@ -43,10 +43,29 @@
 - **react-day-picker**: ^10.0.1 - Date picker component
 - **tw-animate-css**: ^1.4.0 - Tailwind CSS animations
 
+
+## 📝 NPM Scripts
+
+```bash
+npm run dev              # Start development server with hot reload
+npm run build            # Build for production
+npm run start            # Start production server
+
+npm run lint             # Run ESLint
+npm run lint:check       # Run ESLint with strict warnings (max-warnings: 0)
+npm run lint:fix         # Fix ESLint issues automatically
+
+npm run format:check     # Check code formatting with Prettier
+npm run format:fix       # Fix code formatting automatically
+
+npm run db:generate      # Generate Prisma client types
+```
+
+
 ## 📁 Project Structure
 
 ```
-first-app/
+vivace/
 ├── app/
 │   ├── api/                      # API routes & endpoints
 │   │   ├── booking/route.ts      # Booking API endpoint
@@ -80,23 +99,6 @@ first-app/
 ├── tailwind.config.ts            # Tailwind CSS configuration
 ├── postcss.config.mjs            # PostCSS configuration
 └── components.json               # Component metadata
-```
-
-## 📝 NPM Scripts
-
-```bash
-npm run dev              # Start development server with hot reload
-npm run build            # Build for production
-npm run start            # Start production server
-
-npm run lint             # Run ESLint
-npm run lint:check       # Run ESLint with strict warnings (max-warnings: 0)
-npm run lint:fix         # Fix ESLint issues automatically
-
-npm run format:check     # Check code formatting with Prettier
-npm run format:fix       # Fix code formatting automatically
-
-npm run db:generate      # Generate Prisma client types
 ```
 
 ## 🗄 Database
