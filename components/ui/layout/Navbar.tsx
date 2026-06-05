@@ -3,7 +3,6 @@ import { Monoton } from "next/font/google";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Quicksand } from "next/font/google";
-import BB from "../icons/burgerbutton";
 import { useEffect, useState } from "react";
 
 const monoton = Monoton({ weight: ["400"] });
@@ -52,7 +51,7 @@ export default function Navbar() {
       )}
     >
       <div
-        className="flex items-center rounded-2xl px-4 transition-all duration-500"
+        className="flex items-center rounded-2xl px-4 transition-all duration-500 "
         style={{
           background: navBg,
           backdropFilter: "blur(24px) saturate(180%)",
@@ -118,7 +117,7 @@ export default function Navbar() {
           >
             Contact Us
           </button>
-          <BB />
+          {/* <BB /> */}
         </div>
       </div>
     </div>
