@@ -1,8 +1,8 @@
 "use client";
-
+import { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
+import BookingModal from "../BookingModal";
 import { Quicksand } from "next/font/google";
 import { AnimatedTooltipPreview } from "@/components/ui/heroCard";
 import { cn } from "@/lib/utils";
@@ -14,7 +14,7 @@ const quicksand = Quicksand({
 });
 
 export default function Hero() {
-  const router = useRouter();
+  const [bookingOpen, setBookingOpen] = useState(false);
 
   return (
     <section className="h-screen w-full relative overflow-hidden ">
@@ -37,11 +37,15 @@ export default function Hero() {
           <button
             className="rounded-full bg-bb-red hover:bg-rose-900 text-white px-6 py-3 cursor-pointer"
             onClick={() => {
-              router.push("/booking");
+              setBookingOpen(true);
             }}
           >
             Book Appointment
           </button>
+          <BookingModal
+            isOpen={bookingOpen}
+            onClose={() => setBookingOpen(false)}
+          />
           <p className="text-white text-base max-w-sm pt-8 pb-16">
             Discover a world of sophistication and personalized beauty at
             Vivace. Our salon is more than just a place for haircuts; it&pos;s a

@@ -2,7 +2,7 @@ import ProductCard from "@/components/ui/product-section-card";
 
 export default function ProductView() {
   return (
-    <div className="p-24  ">
+    <div id="store" className="p-24  ">
       <div className="">
         <h1 className="pb-5 text-6xl font-medium">Our Products</h1>
         <div className="flex justify-between">

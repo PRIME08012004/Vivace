@@ -14,7 +14,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Adjust this threshold based on where your light section starts
+      // adjust this threshold based on where your light section starts
       setIsLight(window.scrollY > 400);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -38,9 +38,10 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Our Team", href: "/services" },
-    { name: "About Us", href: "/about" },
-    { name: "Blog", href: "/contact" },
+    { name: "Our Services", href: "#our-services" },
+    { name: "Our Team", href: "#our-team" },
+    { name: "Our Products", href: "#store" },
+    { name: "Career", href: "/contact" },
   ];
 
   return (
@@ -61,7 +62,6 @@ export default function Navbar() {
             "0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -1px 0 rgba(0,0,0,0.1)",
         }}
       >
-     
         <div className="flex-1">
           <ul className={cn(quicksand.className, "flex gap-8 p-3 px-4")}>
             {navLinks.map((link) => (
@@ -82,7 +82,6 @@ export default function Navbar() {
           </ul>
         </div>
 
-    
         <h1
           className={cn(
             monoton.className,

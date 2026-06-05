@@ -13,6 +13,7 @@
   display: none;                /* Chrome/Safari */
 }
 @theme{
+  --color-red-14:#631308;
   --color-gray-16:#1e1e1e;
   --color-gray-15:#3f3f3f;
   --color-wcu-rose:#ba1338;

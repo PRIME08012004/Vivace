@@ -8,7 +8,7 @@ const quicksand = Quicksand({
 export default function OurServices() {
   return (
     <>
-      <div className="flex justify-between pb-16">
+      <div id="our-services" className="flex justify-between pb-16">
         <div
           className={cn(
             quicksand.className,
