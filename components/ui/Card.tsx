@@ -34,12 +34,14 @@ export default function Card({
         className={`flex flex-col gap-1 p-2 sm:p-4 z-10 ${imagePosition === "left" ? "w-2/3 sm:w-1/2" : "w-full"}`}
       >
         {subtitle && <p className="text-xs text-black">{subtitle}</p>}
-        <h3 className="font-bold text-base sm:text-lg leading-tight text-black">{title}</h3>
+        <h3 className="font-bold text-base sm:text-lg leading-tight text-black">
+          {title}
+        </h3>
       </div>
 
       <button
         onClick={onClick}
-        className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 bg-black text-white rounded-full p-2 z-10"
+        className="transition delay-300 ease-in-out absolute bottom-2 right-2 sm:bottom-3 sm:right-3 bg-black text-white rounded-full p-2 z-10 hover:bg-white hover:text-black"
       >
         <Arrow />
       </button>

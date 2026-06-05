@@ -67,14 +67,25 @@ export default function Navbar() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           style={{ color: textColor }}
         >
-          <span className="w-5 h-0.5 transition-all" style={{ background: textColor }} />
-          <span className="w-5 h-0.5 transition-all" style={{ background: textColor }} />
-          <span className="w-5 h-0.5 transition-all" style={{ background: textColor }} />
+          <span
+            className="w-5 h-0.5 transition-all"
+            style={{ background: textColor }}
+          />
+          <span
+            className="w-5 h-0.5 transition-all"
+            style={{ background: textColor }}
+          />
+          <span
+            className="w-5 h-0.5 transition-all"
+            style={{ background: textColor }}
+          />
         </button>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-1">
-          <ul className={cn(quicksand.className, "flex gap-4 lg:gap-8 p-3 px-4")}>
+          <ul
+            className={cn(quicksand.className, "flex gap-4 lg:gap-8 p-3 px-4")}
+          >
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link

@@ -14,12 +14,16 @@ export default function WhyChooseUs() {
         </div>
         <div className="flex flex-wrap gap-4 md:gap-0 mt-4 md:mt-0">
           <div className="flex flex-col justify-center">
-            <span className="text-3xl sm:text-4xl md:text-6xl font-medium">30k</span>
+            <span className="text-3xl sm:text-4xl md:text-6xl font-medium">
+              30k
+            </span>
             <span className="text-sm sm:text-base">Satisfied Client</span>
           </div>
           <div className="w-px h-12 md:h-16 bg-white mx-4 md:mx-10" />
           <div className="flex flex-col justify-center">
-            <span className="text-3xl sm:text-4xl md:text-6xl font-medium">15</span>
+            <span className="text-3xl sm:text-4xl md:text-6xl font-medium">
+              15
+            </span>
             <span className="text-sm sm:text-base">Salons in the city</span>
           </div>
         </div>
@@ -46,8 +50,8 @@ export default function WhyChooseUs() {
           <div></div>
           <div className="text-sm sm:text-base md:text-base">
             We&apos;re not just following trends; we&apos;re setting them. Step
-            into the latest fashion with our trendsetting styles that keep you ahead of
-            the curve.
+            into the latest fashion with our trendsetting styles that keep you
+            ahead of the curve.
           </div>
         </div>
         <div className="bg-wcu-rose rounded-2xl sm:rounded-4xl text-white flex flex-col md:flex-row justify-center items-center p-4 md:p-6">

@@ -8,7 +8,10 @@ const quicksand = Quicksand({
 export default function OurServices() {
   return (
     <>
-      <div id="our-services" className="flex flex-col md:flex-row justify-between pb-8 md:pb-16 px-4 sm:px-8">
+      <div
+        id="our-services"
+        className="flex flex-col md:flex-row justify-between pb-8 md:pb-16 px-4 sm:px-8"
+      >
         <div
           className={cn(
             quicksand.className,
@@ -16,7 +19,9 @@ export default function OurServices() {
           )}
         >
           <div className="flex flex-col">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl p-2 sm:p-4 font-medium">Our Services</h1>
+            <h1 className="text-3xl sm:text-5xl md:text-6xl p-2 sm:p-4 font-medium">
+              Our Services
+            </h1>
             <p className="p-2 sm:p-4 text-sm sm:text-base">
               Beyond haircuts, discover a comprehensive<br></br> range of
               services, from coloring to extensions

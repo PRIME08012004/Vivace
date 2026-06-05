@@ -33,7 +33,9 @@ export default function Footer() {
           />
         </div>
         <div className="w-full md:w-auto">
-          <h1 className="text-white text-lg sm:text-2xl pb-4 md:pb-6">Contact Us</h1>
+          <h1 className="text-white text-lg sm:text-2xl pb-4 md:pb-6">
+            Contact Us
+          </h1>
           <div className="text-gray-300 text-base md:text-lg">
             <h2 className="pb-2">
               {" "}
@@ -45,7 +47,9 @@ export default function Footer() {
               <br />
             </h2>
             <h2 className="pb-2">career@vivace.com</h2>
-            <h1 className="text-white text-lg sm:text-2xl pb-4 md:pb-6 pt-4 md:pt-6">Visit Us</h1>
+            <h1 className="text-white text-lg sm:text-2xl pb-4 md:pb-6 pt-4 md:pt-6">
+              Visit Us
+            </h1>
             <div className="text-gray-300 text-base md:text-lg">
               <h2 className="pb-2">
                 12, Sea Breeze Bungalow
@@ -80,7 +84,9 @@ export default function Footer() {
               Book Your Consultation
             </button>
 
-            <h1 className="text-white text-base sm:text-2xl text-center">Subscribe to the newsletter</h1>
+            <h1 className="text-white text-base sm:text-2xl text-center">
+              Subscribe to the newsletter
+            </h1>
             <div className="flex justify-between m-2 p-2 bg-gray-15 rounded-full w-full sm:w-auto mt-4">
               <input
                 type="text"

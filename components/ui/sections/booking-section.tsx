@@ -10,9 +10,16 @@ const quicksand = Quicksand({
 
 export default function Booking() {
   return (
-    <div className={cn(quicksand.className, "flex flex-col md:flex-row justify-evenly gap-8 md:gap-0 p-4 sm:p-8 md:p-0")}>
+    <div
+      className={cn(
+        quicksand.className,
+        "flex flex-col md:flex-row justify-evenly gap-8 md:gap-0 p-4 sm:p-8 md:p-0",
+      )}
+    >
       <div className="flex relative overflow-hidden flex-col w-full md:w-auto">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-medium">Booking</h1>
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-medium">
+          Booking
+        </h1>
         <p className="w-full md:w-90 pt-4 md:pt-8 text-sm sm:text-base">
           Ready for a transformative experience? Book your appointment now at
           vivace and let us craft a style that defines you.

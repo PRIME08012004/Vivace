@@ -28,7 +28,9 @@ export default function OurTeamcard() {
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2.5fr] gap-6 md:gap-12 items-center">
         <div className="flex flex-col gap-4 md:gap-6">
           <div>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-medium text-black mb-4 md:mb-6">Our Team</h2>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-medium text-black mb-4 md:mb-6">
+              Our Team
+            </h2>
             <p className="text-black text-xs sm:text-sm md:text-base leading-relaxed mb-4 md:mb-6">
               Entrust your locks to our team of skilled and creative stylists
             </p>
@@ -71,7 +73,9 @@ export default function OurTeamcard() {
                 <h3 className="text-base md:text-lg font-semibold text-black">
                   {member.name}
                 </h3>
-                <p className="text-xs md:text-sm text-gray-600">{member.role}</p>
+                <p className="text-xs md:text-sm text-gray-600">
+                  {member.role}
+                </p>
               </div>
             </div>
           ))}
