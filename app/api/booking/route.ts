@@ -1,8 +1,14 @@
 import { prisma } from "@/lib/prisma";
 import "dotenv/config.js";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: Request) {
+export async function GET() {
+  const res = await prisma.bookings.findMany();
+  return NextResponse.json({
+    res: res,
+  });
+}
+export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     await prisma.bookings.findFirst({});
