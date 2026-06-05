@@ -17,29 +17,29 @@ export default function Card({
   onClick,
 }: CardProps) {
   return (
-    <div className="relative flex items-center rounded-3xl overflow-hidden bg-white w-70 h-40 ">
+    <div className="relative flex flex-col sm:flex-row items-center rounded-2xl sm:rounded-3xl overflow-hidden bg-white w-full sm:w-70 h-40 sm:h-40">
       {imagePosition === "left" && (
-        <div className="w-1/2 h-full relative">
+        <div className="w-1/3 sm:w-1/2 h-full relative">
           <Image src={image} alt={title} fill className="object-fill p-2" />
         </div>
       )}
 
       {imagePosition === "background" && (
         <div className="absolute inset-0">
-          <Image src={image} alt={title} fill className="object-fill " />
+          <Image src={image} alt={title} fill className="object-fill" />
         </div>
       )}
 
       <div
-        className={`flex flex-col gap-1 p-4 z-10 ${imagePosition === "left" ? "w-1/2" : "w-full"}`}
+        className={`flex flex-col gap-1 p-2 sm:p-4 z-10 ${imagePosition === "left" ? "w-2/3 sm:w-1/2" : "w-full"}`}
       >
         {subtitle && <p className="text-xs text-black">{subtitle}</p>}
-        <h3 className="font-bold text-lg leading-tight text-black">{title}</h3>
+        <h3 className="font-bold text-base sm:text-lg leading-tight text-black">{title}</h3>
       </div>
 
       <button
         onClick={onClick}
-        className="absolute bottom-3 right-3 bg-black text-white rounded-full p-2 z-10"
+        className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 bg-black text-white rounded-full p-2 z-10"
       >
         <Arrow />
       </button>

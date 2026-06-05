@@ -17,25 +17,29 @@ export default function Hero() {
   const [bookingOpen, setBookingOpen] = useState(false);
 
   return (
-    <section className="h-screen w-full relative overflow-hidden ">
+    <section className="min-h-screen h-auto sm:h-screen w-full relative overflow-hidden">
       <Image
         src="/finalmodel.png"
         alt="Hair Model"
         fill
-        className="object-fill "
+        className="object-cover"
       />
 
       <div
         className={cn(
           quicksand.className,
-          "relative z-10 flex justify-between h-screen ",
+          "relative z-10 flex flex-col md:flex-row justify-between min-h-screen md:h-screen",
         )}
       >
-        <div className="flex flex-col gap-6 justify-center items-start h-full w-1/2 pl-16 -mt-40 ml-6 pt-80">
-          <h1 className="text-white text-7xl font-semibold">Get Hair Style</h1>
-          <h1 className="text-white text-7xl font-semibold">You Deserve</h1>
+        <div className="flex flex-col gap-4 sm:gap-6 justify-center items-start h-full w-full md:w-1/2 px-4 sm:px-8 md:pl-16 pt-24 sm:pt-40 md:pt-0 md:-mt-40 md:ml-6 md:pt-80 pb-8 md:pb-0">
+          <h1 className="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight">
+            Get Hair Style
+          </h1>
+          <h1 className="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight">
+            You Deserve
+          </h1>
           <button
-            className="rounded-full bg-bb-red hover:bg-rose-900 text-white px-6 py-3 cursor-pointer"
+            className="rounded-full bg-bb-red hover:bg-rose-900 text-white px-4 sm:px-6 py-2 sm:py-3 cursor-pointer text-sm sm:text-base"
             onClick={() => {
               setBookingOpen(true);
             }}
@@ -46,12 +50,12 @@ export default function Hero() {
             isOpen={bookingOpen}
             onClose={() => setBookingOpen(false)}
           />
-          <p className="text-white text-base max-w-sm pt-8 pb-16">
+          <p className="text-white text-xs sm:text-sm md:text-base max-w-xs sm:max-w-sm pt-4 sm:pt-8 pb-6 sm:pb-16">
             Discover a world of sophistication and personalized beauty at
             Vivace. Our salon is more than just a place for haircuts; it&pos;s a
             haven where your unique style takes center stage.
           </p>
-          <div className="flex justify-center gap-2">
+          <div className="flex flex-col sm:flex-row justify-center gap-2 w-full md:w-auto">
             <Card
               title="New Arrival"
               subtitle="+5 product"
@@ -67,7 +71,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 right-0 p-8 mb-8 mr-8 flex justify-center items-center ">
+        <div className="hidden md:flex absolute bottom-0 right-0 p-4 md:p-8 mb-4 md:mb-8 mr-4 md:mr-8">
           <AnimatedTooltipPreview />
         </div>
       </div>
