@@ -62,45 +62,6 @@ npm run db:generate      # Generate Prisma client types
 ```
 
 
-## 📁 Project Structure
-
-```
-vivace/
-├── app/
-│   ├── api/                      # API routes & endpoints
-│   │   ├── booking/route.ts      # Booking API endpoint
-│   │   └── [auth]/route.ts       # NextAuth routes
-│   ├── careers/                  # Careers page route
-│   ├── store/                    # State management layer
-│   ├── layout.tsx                # Root layout component
-│   ├── page.tsx                  # Homepage with all sections
-│   ├── globals.css               # Global styles & Tailwind directives
-│   └── favicon.ico               # App icon
-├── components/
-│   └── ui/
-│       └── sections/             # Page sections
-│           ├── heroSection.tsx
-│           ├── our-services-section.tsx
-│           ├── booking-section.tsx
-│           ├── product-section.tsx
-│           ├── why-choose-us.tsx
-│           └── our-team-section.tsx
-├── hooks/                        # Custom React hooks
-├── lib/
-│   └── utils.ts                  # Utility functions
-├── prisma/
-│   ├── schema.prisma             # Database schema
-│   ├── prisma.config.ts          # Prisma configuration
-│   └── migrations/               # Database migrations
-├── public/                       # Static assets
-├── eslint.config.mjs             # ESLint configuration
-├── next.config.ts                # Next.js configuration
-├── tsconfig.json                 # TypeScript configuration
-├── tailwind.config.ts            # Tailwind CSS configuration
-├── postcss.config.mjs            # PostCSS configuration
-└── components.json               # Component metadata
-```
-
 ## 🗄 Database
 
 **ORM**: Prisma 7.8.0  
@@ -152,4 +113,43 @@ Migrations in `prisma/migrations/`
 
 ---
 
-**Vivace - Service Booking Platform**
+
+## 📁 Project Structure
+
+```
+vivace/
+├── app/
+│   ├── api/                      # API routes & endpoints
+│   │   ├── booking/route.ts      # Booking API endpoint
+│   │   └── [auth]/route.ts       # NextAuth routes
+│   ├── careers/                  # Careers page route
+│   ├── store/                    # State management layer
+│   ├── layout.tsx                # Root layout component
+│   ├── page.tsx                  # Homepage with all sections
+│   ├── globals.css               # Global styles & Tailwind directives
+│   └── favicon.ico               # App icon
+├── components/
+│   └── ui/
+│       └── sections/             # Page sections
+│           ├── heroSection.tsx
+│           ├── our-services-section.tsx
+│           ├── booking-section.tsx
+│           ├── product-section.tsx
+│           ├── why-choose-us.tsx
+│           └── our-team-section.tsx
+├── hooks/                        # Custom React hooks
+├── lib/
+│   └── utils.ts                  # Utility functions
+├── prisma/
+│   ├── schema.prisma             # Database schema
+│   ├── prisma.config.ts          # Prisma configuration
+│   └── migrations/               # Database migrations
+├── public/                       # Static assets
+├── eslint.config.mjs             # ESLint configuration
+├── next.config.ts                # Next.js configuration
+├── tsconfig.json                 # TypeScript configuration
+├── tailwind.config.ts            # Tailwind CSS configuration
+├── postcss.config.mjs            # PostCSS configuration
+└── components.json               # Component metadata
+```
+
