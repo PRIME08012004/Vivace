@@ -1,4 +1,4 @@
-# Vivace - Technical Documentation
+# Vivace - A Italian Hair-salon Website
 
 ## 🛠 Tech Stack
 
