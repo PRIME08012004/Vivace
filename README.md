@@ -99,29 +99,6 @@ npm run format:fix       # Fix code formatting automatically
 npm run db:generate      # Generate Prisma client types
 ```
 
-## ✨ Core Features
-
-### Page Sections (Homepage)
-1. **Hero Section** - Landing introduction with CTA
-2. **Our Services** - Service offerings display
-3. **Booking Section** - Booking form with API integration
-4. **Product View** - Product gallery & showcase
-5. **Why Choose Us** - Value proposition section
-6. **Our Team** - Team member profiles
-
-### Core Functionality
-- **Service Booking API** - POST endpoint at `/api/booking`
-- **Authentication** - NextAuth integration with Google OAuth
-- **Database ORM** - Prisma with PostgreSQL
-- **Type Safety** - Full TypeScript coverage
-- **Responsive Design** - Tailwind CSS breakpoints
-- **Maps Integration** - Google Maps embedded components
-
-## 🔌 API Endpoints
-
-- `POST /api/booking` - Submit booking requests
-- `GET/POST /api/auth/*` - NextAuth authentication routes
-
 ## 🗄 Database
 
 **ORM**: Prisma 7.8.0  
