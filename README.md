@@ -2,13 +2,13 @@
 
 ## Tech-Stack
 
-**Next.js** : framework
-**TypeScript** : language
-**Tailwind** : CSS
-**Prisma** : ORM
-**NextAuth.js** : auth
-**Shad-cn** : UI-Component
-**Vercel** : deployments
+- **Next.js** - Framework
+- **TypeScript** - Language
+- **Tailwind CSS** - Styling
+- **Prisma** - ORM
+- **NextAuth.js** - Authentication
+- **Shadcn/ui** - UI Components
+- **Vercel** - Deployment
 
 ## 📝 NPM Scripts
 
