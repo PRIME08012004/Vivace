@@ -28,57 +28,6 @@ npm run db:generate      # Generate Prisma client types
 ```
 
 
-## 🗄 Database
-
-**ORM**: Prisma 7.8.0  
-**Database**: PostgreSQL  
-**Adapter**: @prisma/adapter-pg
-
-Schema definitions in `prisma/schema.prisma`  
-Migrations in `prisma/migrations/`
-
-## 🔐 Authentication
-
-**Provider**: NextAuth 4.24.14  
-**Strategy**: OAuth (Google)  
-**Configuration**: Environment variables
-
-## 📦 Component Libraries
-
-- **shadcn/ui** - Reusable component system
-- **@base-ui/react** - Headless base components
-- **Motion** - Animation library for React
-- **Tabler Icons** - Icon set (1000+ icons)
-- **Lucide React** - Icon library
-
-## 🎨 Styling Approach
-
-- **Utility-First CSS**: Tailwind CSS 4
-- **PostCSS Processing**: Enhanced with postcss plugins
-- **CSS-in-JS Utilities**: clsx, tailwind-merge for dynamic classes
-- **Class Variance**: class-variance-authority for component variations
-- **Animation Library**: Motion for complex animations + tw-animate-css
-
-## 📋 Configuration Files
-
-| File | Purpose |
-|------|---------|
-| `tsconfig.json` | TypeScript compilation settings |
-| `next.config.ts` | Next.js build & runtime configuration |
-| `tailwind.config.ts` | Tailwind CSS theme & plugin configuration |
-| `postcss.config.mjs` | PostCSS plugin pipeline |
-| `eslint.config.mjs` | Code linting rules & settings |
-| `components.json` | Component library metadata |
-| `prisma.config.ts` | Prisma client configuration |
-
-## 🚀 Build Output
-
-- **Next.js Build**: Optimized for Vercel deployment
-- **Output Mode**: Standalone by default
-- **Asset Optimization**: Automatic image & font optimization
-
----
-
 
 ## 📁 Project Structure
 
