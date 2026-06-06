@@ -1,48 +1,13 @@
 # Vivace - A Italian Hair-salon Website
 
-## 🛠 Tech Stack
-
-### Frontend
-- **Framework**: Next.js 16.2.4
-- **UI Library**: React 19.2.4 with React DOM 19.2.4
-- **Language**: TypeScript 5
-- **Styling**: 
-  - Tailwind CSS 4 with PostCSS
-  - @tailwindcss/postcss ^4
-  - tailwind-merge ^3.6.0
-  - class-variance-authority ^0.7.1
-- **Component System**: shadcn/ui ^4.8.0
-- **Icons**: 
-  - Lucide React ^1.16.0
-  - @tabler/icons-react ^3.44.0
-- **Animations**: Motion ^12.40.0
-- **Base Components**: @base-ui/react ^1.5.0
-- **Utilities**: 
-  - clsx ^2.1.1
-  - date-fns ^4.3.0
-
-### Backend & Database
-- **Runtime**: Node.js
-- **ORM**: Prisma 7.8.0
-- **Database**: PostgreSQL via @prisma/adapter-pg ^7.8.0
-- **Database Client**: pg ^8.20.0
-- **Authentication**: next-auth ^4.24.14
-
-### API & HTTP
-- **HTTP Client**: axios ^1.16.0
-- **Maps Integration**: @react-google-maps/api ^2.20.8
-
-### Dev Tools
-- **Linting**: ESLint 9
-- **Formatting**: Prettier ^3.8.3
-- **Build Tool**: Next.js 16.2.4
-- **Type Checking**: TypeScript 5
-
-### Key Dependencies
-- **dotenv**: ^17.4.2 - Environment variable management
-- **react-day-picker**: ^10.0.1 - Date picker component
-- **tw-animate-css**: ^1.4.0 - Tailwind CSS animations
-
+## Tech-Stack
+**Next.js** – framework
+**TypeScript** – language
+**Tailwind** – CSS
+**Prisma** – ORM
+**NextAuth.js** – auth
+**Shad-cn** – UI-Component
+Vercel – deployments
 
 ## 📝 NPM Scripts
 
