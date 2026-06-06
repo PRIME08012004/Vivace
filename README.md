@@ -1,6 +1,7 @@
 # Vivace - A Italian Hair-salon Website
 
 ## Tech-Stack
+
 **Next.js** : framework
 **TypeScript** : language
 **Tailwind** : CSS
