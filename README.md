@@ -1,13 +1,13 @@
 # Vivace - A Italian Hair-salon Website
 
 ## Tech-Stack
-**Next.js** – framework
-**TypeScript** – language
-**Tailwind** – CSS
-**Prisma** – ORM
-**NextAuth.js** – auth
-**Shad-cn** – UI-Component
-**Vercel** – deployments
+**Next.js** : framework
+**TypeScript** : language
+**Tailwind** : CSS
+**Prisma** : ORM
+**NextAuth.js** : auth
+**Shad-cn** : UI-Component
+**Vercel** : deployments
 
 ## 📝 NPM Scripts
 
