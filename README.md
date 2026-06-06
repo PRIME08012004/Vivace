@@ -7,7 +7,7 @@
 **Prisma** – ORM
 **NextAuth.js** – auth
 **Shad-cn** – UI-Component
-Vercel – deployments
+**Vercel** – deployments
 
 ## 📝 NPM Scripts
 
