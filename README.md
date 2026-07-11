@@ -7,7 +7,6 @@
 - **Tailwind CSS** - Styling
 - **Prisma** - ORM
 - **NextAuth.js** - Authentication
-- **Shadcn/ui** - UI Components
 - **Vercel** - Deployment
 
 ## 📝 NPM Scripts
