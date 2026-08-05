@@ -1,8 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, FormEvent } from "react";
 import { Quicksand } from "next/font/google";
 import { cn } from "@/lib/utils";
 import CustomSelect from "./custom-select";
+
 const quicksand = Quicksand({ weight: ["400", "600"] });
 
 interface BookingModalProps {
@@ -12,6 +13,13 @@ interface BookingModalProps {
 
 export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [service, setService] = useState("");
+  const [date, setDate] = useState("");
+  const [timeSlot, setTimeSlot] = useState("");
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -29,8 +37,42 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
   }, [isOpen]);
 
   useEffect(() => {
-    if (!isOpen) setTimeout(() => setSubmitted(false), 300);
+    if (!isOpen) {
+      setTimeout(() => {
+        setSubmitted(false);
+        setError("");
+        setLoading(false);
+      }, 300);
+    }
   }, [isOpen]);
+
+  async function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    setError("");
+    if (!name || !phone || !service || !date || !timeSlot) {
+      setError("Please fill in all fields");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const res = await fetch("/api/booking", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone, service, date, timeSlot }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error ?? "Failed to create booking");
+        return;
+      }
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  }
 
   if (!isOpen) return null;
 
@@ -84,17 +126,29 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                 Book your appointment
               </h2>
               <p className="text-white/50 text-xs mt-1">
-                We&apos;ll confirm within 2 hours
+                Confirmation will be sent on WhatsApp
               </p>
             </div>
 
-            <div className="flex flex-col gap-3">
+            <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
               <Field label="Full name">
-                <input type="text" placeholder="Priya Sharma" />
+                <input
+                  type="text"
+                  placeholder="Priya Sharma"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
               </Field>
 
               <Field label="Phone number">
-                <input type="tel" placeholder="+91 98765 43210" />
+                <input
+                  type="tel"
+                  placeholder="+91 98765 43210"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                />
               </Field>
 
               <Field label="Service">
@@ -107,12 +161,19 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                     "Bridal package",
                   ]}
                   placeholder="Select a service"
+                  value={service}
+                  onChange={setService}
                 />
               </Field>
 
               <div className="grid grid-cols-2 gap-3">
                 <Field label="Date">
-                  <input type="date" />
+                  <input
+                    type="date"
+                    value={date}
+                    onChange={(e) => setDate(e.target.value)}
+                    required
+                  />
                 </Field>
                 <Field label="Time">
                   <CustomSelect
@@ -124,15 +185,22 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       "4:00 PM",
                     ]}
                     placeholder="Pick a time"
+                    value={timeSlot}
+                    onChange={setTimeSlot}
                   />
                 </Field>
               </div>
 
+              {error ? (
+                <p className="text-red-300 text-xs text-center">{error}</p>
+              ) : null}
+
               <button
-                onClick={() => setSubmitted(true)}
-                className="w-full mt-2 rounded-full py-3 text-sm text-white cursor-pointer transition-all duration-200"
+                type="submit"
+                disabled={loading}
+                className="w-full mt-2 rounded-full py-3 text-sm text-white cursor-pointer transition-all duration-200 disabled:opacity-60"
                 style={{
-                  background: "rgba(255,255,255,0.12",
+                  background: "rgba(255,255,255,0.12)",
                   border: "1px solid rgba(255,255,255,0.25)",
                 }}
                 onMouseEnter={(e) =>
@@ -142,9 +210,9 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                   (e.currentTarget.style.background = "rgba(255,255,255,0.12)")
                 }
               >
-                Confirm booking
+                {loading ? "Booking..." : "Confirm booking"}
               </button>
-            </div>
+            </form>
           </>
         ) : (
           <div className="flex flex-col items-center justify-center py-8 text-center">
@@ -170,7 +238,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
               Booking confirmed!
             </p>
             <p className="text-white/50 text-sm">
-              We&apos;ll send you a reminder before your appointment.
+              We&apos;ll send you a WhatsApp confirmation shortly.
             </p>
           </div>
         )}

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ProductCard from "@/components/ui/product-section-card";
 
 export default function ProductView() {
@@ -12,9 +13,12 @@ export default function ProductView() {
             Experience the difference with top-tier products that enhance both
             the aesthetics and health of your hair.
           </p>
-          <button className="rounded-full bg-bb-red hover:bg-rose-900 text-white px-6 py-3 cursor-pointer text-sm sm:text-base whitespace-nowrap">
+          <Link
+            href="/store"
+            className="rounded-full bg-bb-red hover:bg-rose-900 text-white px-6 py-3 cursor-pointer text-sm sm:text-base whitespace-nowrap inline-flex items-center justify-center"
+          >
             Our Store
-          </button>
+          </Link>
         </div>
       </div>
       <div>

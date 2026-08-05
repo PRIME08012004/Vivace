@@ -2,12 +2,11 @@
 
 generator client {
   provider = "prisma-client-js"
-   output   = "../app/generated/prisma"
+  output   = "../app/generated/prisma"
 }
 
 datasource db {
   provider = "postgresql"
-
 }
 
 enum BookingStatus {
@@ -17,33 +16,112 @@ enum BookingStatus {
   COMPLETED
 }
 
+enum OrderStatus {
+  PENDING
+  PAID
+  FAILED
+}
+
 model User {
-  id        Int   @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   name      String
-  email     String    @unique
+  email     String   @unique
   phone     String?
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
+  password  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   bookings  Bookings[]
+  addresses Address[]
+  orders    Order[]
 
   @@map("users")
 }
 
 model Bookings {
-  id        Int        @id @default(autoincrement())
+  id       Int @id @default(autoincrement())
 
-  userId    Int
-  user      User          @relation(fields: [userId], references: [id])
+  userId Int
+  user   User @relation(fields: [userId], references: [id])
 
-  service   String
-  date      DateTime
-  timeSlot  String
-  notes     String?
-  status    BookingStatus @default(PENDING)
+  service  String
+  date     DateTime
+  timeSlot String
+  notes    String?
+  status   BookingStatus @default(PENDING)
 
-  createdAt DateTime      @default(now())
-  updatedAt DateTime      @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@map("bookings")
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  slug        String   @unique
+  name        String
+  description String?
+  priceInPaise Int
+  image       String
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  orderItems OrderItem[]
+
+  @@map("products")
+}
+
+model Address {
+  id       Int     @id @default(autoincrement())
+  userId   Int?
+  user     User?   @relation(fields: [userId], references: [id])
+  fullName String
+  phone    String
+  email    String
+  line1    String
+  line2    String?
+  city     String
+  state    String
+  pincode  String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  orders Order[]
+
+  @@map("addresses")
+}
+
+model Order {
+  id              Int         @id @default(autoincrement())
+  userId          Int?
+  user            User?       @relation(fields: [userId], references: [id])
+  addressId       Int
+  address         Address     @relation(fields: [addressId], references: [id])
+  amountInPaise   Int
+  currency        String      @default("INR")
+  status          OrderStatus @default(PENDING)
+  razorpayOrderId String?     @unique
+  razorpayPaymentId String?
+  razorpaySignature String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  items OrderItem[]
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id           Int     @id @default(autoincrement())
+  orderId      Int
+  order        Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId    Int
+  product      Product @relation(fields: [productId], references: [id])
+  quantity     Int
+  priceInPaise Int
+
+  @@map("order_items")
 }
